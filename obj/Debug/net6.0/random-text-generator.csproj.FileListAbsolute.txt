@@ -1,0 +1,15 @@
+C:\Users\naard\Dev\Projects\random-text-generator\bin\Debug\net6.0\random-text-generator.exe
+C:\Users\naard\Dev\Projects\random-text-generator\bin\Debug\net6.0\random-text-generator.deps.json
+C:\Users\naard\Dev\Projects\random-text-generator\bin\Debug\net6.0\random-text-generator.runtimeconfig.json
+C:\Users\naard\Dev\Projects\random-text-generator\bin\Debug\net6.0\random-text-generator.dll
+C:\Users\naard\Dev\Projects\random-text-generator\bin\Debug\net6.0\ref\random-text-generator.dll
+C:\Users\naard\Dev\Projects\random-text-generator\bin\Debug\net6.0\random-text-generator.pdb
+C:\Users\naard\Dev\Projects\random-text-generator\obj\Debug\net6.0\random-text-generator.csproj.AssemblyReference.cache
+C:\Users\naard\Dev\Projects\random-text-generator\obj\Debug\net6.0\random-text-generator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\naard\Dev\Projects\random-text-generator\obj\Debug\net6.0\random-text-generator.AssemblyInfoInputs.cache
+C:\Users\naard\Dev\Projects\random-text-generator\obj\Debug\net6.0\random-text-generator.AssemblyInfo.cs
+C:\Users\naard\Dev\Projects\random-text-generator\obj\Debug\net6.0\random-text-generator.csproj.CoreCompileInputs.cache
+C:\Users\naard\Dev\Projects\random-text-generator\obj\Debug\net6.0\random-text-generator.dll
+C:\Users\naard\Dev\Projects\random-text-generator\obj\Debug\net6.0\ref\random-text-generator.dll
+C:\Users\naard\Dev\Projects\random-text-generator\obj\Debug\net6.0\random-text-generator.pdb
+C:\Users\naard\Dev\Projects\random-text-generator\obj\Debug\net6.0\random-text-generator.genruntimeconfig.cache
