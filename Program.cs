@@ -3,11 +3,17 @@
 string latinText = File.ReadAllText(path);
 string[] words = latinText.Split(' ');
 
-System.Console.WriteLine(RandomParagraph(words));
-
+GenerateText(5, words);
 
 
 //methods
+
+static void GenerateText(int paragraphsNumber, string[] words) {
+    for (int i = 0; i < paragraphsNumber; i++) {
+        System.Console.WriteLine(RandomParagraph(words));
+        System.Console.WriteLine(" ");
+    }
+}
 static string RandomParagraph(string[] words)
 {
     var rnd = new Random();
