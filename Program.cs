@@ -6,13 +6,24 @@ var path = @"C:\Users\naard\Dev\Projects\random-text-generator\cicero.txt";
 string latinText = File.ReadAllText(path);
 string[] words = latinText.Split(' ');
 
-var sentence = RandomSentence(words);
-
-System.Console.WriteLine(sentence);
+System.Console.WriteLine(RandomParagraph(words));
 
 
 
 //methods
+static string RandomParagraph(string[] words)
+{
+    var rnd = new Random();
+    var paragraphLength = rnd.Next(5, 15);
+    var sentencesOfParagraph = new string[paragraphLength];
+
+    for (int i = 0; i < paragraphLength; i++) {
+        sentencesOfParagraph[i] = RandomSentence(words);
+    }
+    return string.Join(" ", sentencesOfParagraph);
+
+}
+
 static string RandomSentence(string[] words)
 {
     var rnd = new Random();
@@ -49,11 +60,11 @@ static string EndSentence(string s)
 
     var chance = new Random().Next(101);
     char punkt;
-    if (chance < 75)
+    if (chance < 85)
     {
         punkt = '.';
     }
-    else if (chance < 95)
+    else if (chance < 97)
     {
         punkt = '?';
     }
