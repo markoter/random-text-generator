@@ -6,13 +6,14 @@ var path = @"C:\Users\naard\Dev\Projects\random-text-generator\cicero.txt";
 string latinText = File.ReadAllText(path);
 string[] words = latinText.Split(' ');
 
-System.Console.WriteLine($"len of words is {words.Count()}");
-
 var sentence = RandomSentence(words);
 
 System.Console.WriteLine(sentence);
 
-string RandomSentence(string[] words)
+
+
+//methods
+static string RandomSentence(string[] words)
 {
     var rnd = new Random();
     var sentenceLength = rnd.Next(3, 10);
