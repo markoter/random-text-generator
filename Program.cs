@@ -1,7 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
-
-var path = @"C:\Users\naard\Dev\Projects\random-text-generator\cicero.txt";
+﻿var path = @"C:\Users\naard\Dev\Projects\random-text-generator\cicero.txt";
 
 string latinText = File.ReadAllText(path);
 string[] words = latinText.Split(' ');
@@ -17,7 +14,8 @@ static string RandomParagraph(string[] words)
     var paragraphLength = rnd.Next(5, 15);
     var sentencesOfParagraph = new string[paragraphLength];
 
-    for (int i = 0; i < paragraphLength; i++) {
+    for (int i = 0; i < paragraphLength; i++)
+    {
         sentencesOfParagraph[i] = RandomSentence(words);
     }
     return string.Join(" ", sentencesOfParagraph);
@@ -33,7 +31,11 @@ static string RandomSentence(string[] words)
 
     for (int i = 0; i < sentenceLength; i++)
     {
-        wordsOfSentence[i] = words[rnd.Next(words.Count())];
+        do
+        {
+            wordsOfSentence[i] = words[rnd.Next(words.Count())];
+        }
+        while (i < 0 && wordsOfSentence[i].Equals(wordsOfSentence[i-1]));
     }
     var sentence = string.Join(" ", wordsOfSentence);
 
