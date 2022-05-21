@@ -45,5 +45,20 @@ static string EndSentence(string s)
     {
         return string.Empty;
     }
-    return s = s + ".";
+
+    var chance = new Random().Next(101);
+    char punkt;
+    if (chance < 75)
+    {
+        punkt = '.';
+    }
+    else if (chance < 95)
+    {
+        punkt = '?';
+    }
+    else
+    {
+        punkt = '!';
+    }
+    return s = s + punkt;
 }
