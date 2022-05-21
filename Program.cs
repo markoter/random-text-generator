@@ -8,4 +8,8 @@ string[] words = latinText.Split(' ');
 
 System.Console.WriteLine(words[1]);
 
+RandomSentence(words);
 
+static void RandomSentence(string[] words) {
+    
+}
