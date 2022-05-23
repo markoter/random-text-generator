@@ -3,17 +3,31 @@
 string latinText = File.ReadAllText(path);
 string[] words = latinText.Split(' ');
 
-GenerateText(5, words);
+// var text = GenerateText(5, words);
+// System.Console.WriteLine(text); 
+File.WriteAllText("demo.txt", GenerateText(5, words));
 
 
 //methods
 
-static void GenerateText(int paragraphsNumber, string[] words) {
-    for (int i = 0; i < paragraphsNumber; i++) {
-        System.Console.WriteLine(RandomParagraph(words));
-        System.Console.WriteLine(" ");
+
+static string GenerateText(int paragraphsNumber, string[] words)
+{
+    var fullText = new string[paragraphsNumber];
+    for (int i = 0; i < paragraphsNumber; i++)
+    {
+        fullText[i] = RandomParagraph(words);
     }
+    return string.Join("\n\n", fullText);
 }
+// static void GenerateTextPrint(int paragraphsNumber, string[] words)
+// {
+//     for (int i = 0; i < paragraphsNumber; i++)
+//     {
+//         System.Console.WriteLine(RandomParagraph(words));
+//         System.Console.WriteLine(" ");
+//     }
+// }
 static string RandomParagraph(string[] words)
 {
     var rnd = new Random();
@@ -41,7 +55,7 @@ static string RandomSentence(string[] words)
         {
             wordsOfSentence[i] = words[rnd.Next(words.Count())];
         }
-        while (i < 0 && wordsOfSentence[i].Equals(wordsOfSentence[i-1]));
+        while (i < 0 && wordsOfSentence[i].Equals(wordsOfSentence[i - 1]));
     }
     var sentence = string.Join(" ", wordsOfSentence);
 
