@@ -1,11 +1,9 @@
-﻿var path = @"C:\Users\naard\Dev\Projects\random-text-generator\cicero.txt";
-
-string latinText = File.ReadAllText(path);
+﻿string latinText = File.ReadAllText("cicero.txt");
 string[] words = latinText.Split(' ');
 
 // var text = GenerateText(5, words);
 // System.Console.WriteLine(text); 
-File.WriteAllText("demo.txt", GenerateText(5, words));
+File.WriteAllText("generatedText.txt", GenerateText(20, words));
 
 
 //methods
