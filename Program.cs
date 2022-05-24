@@ -12,10 +12,12 @@ File.WriteAllText("generatedText.txt", GenerateText(20, words));
 static string GenerateText(int paragraphsNumber, string[] words)
 {
     var fullText = new string[paragraphsNumber];
+    var egg = "Romanes eunt domus!";
     for (int i = 0; i < paragraphsNumber; i++)
     {
         fullText[i] = RandomParagraph(words);
     }
+    fullText[2] = $"{egg} {fullText[2]}";
     return string.Join("\n\n", fullText);
 }
 // static void GenerateTextPrint(int paragraphsNumber, string[] words)
